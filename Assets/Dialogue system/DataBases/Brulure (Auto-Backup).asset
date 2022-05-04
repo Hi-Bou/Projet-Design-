@@ -17,7 +17,7 @@ MonoBehaviour:
   description: 
   globalUserScript: 
   emphasisSettings:
-  - color: {r: 0.5471698, g: 0.005302825, b: 0, a: 1}
+  - color: {r: 0.54901963, g: 0, b: 0.49167153, a: 1}
     bold: 0
     italic: 0
     underline: 0
@@ -235,7 +235,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Entry 1
-      value: '[var=Bandages_Obtenu]/3 Bandages'
+      value: '[var=Quest.Bandages_Obtenu]/3 Bandages'
       type: 0
       typeString: 
   - id: 3
@@ -285,45 +285,15 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Entry 1
-      value: '[var=Glaces_Obtenu]/3 Glaces'
+      value: '[var=Quest.Glaces_Obtenu]/3 Glaces'
       type: 0
       typeString: 
-  - id: 4
-    fields:
-    - title: Name
-      value: "Ammener \xE0 l'hopital"
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-    - title: Success Description
-      value: 
-      type: 0
-      typeString: 
-    - title: Failure Description
-      value: 
-      type: 0
-      typeString: 
-    - title: State
-      value: unassigned
-      type: 0
-      typeString: 
-    - title: Is Item
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
   locations: []
   variables:
   - id: 1
     fields:
     - title: Name
-      value: Bandages_Obtenu
+      value: Quest.Bandages_Obtenu
       type: 0
       typeString: 
     - title: Initial Value
@@ -337,7 +307,7 @@ MonoBehaviour:
   - id: 2
     fields:
     - title: Name
-      value: Glaces_Obtenu
+      value: Quest.Glaces_Obtenu
       type: 0
       typeString: 
     - title: Initial Value
@@ -348,11 +318,39 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 3
+    fields:
+    - title: Name
+      value: Event.Finis
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+  - id: 4
+    fields:
+    - title: Name
+      value: Event.ErrorNumber
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: "nombre d'\xE9rreure "
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
     - title: Title
-      value: New Conversation 1
+      value: Fracture
       type: 0
       typeString: 
     - title: Description
@@ -434,19 +432,19 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 0
         destinationConversationID: 1
-        destinationDialogueID: 1
+        destinationDialogueID: 67
         isConnector: 0
-        priority: 2
+        priority: 4
+      - originConversationID: 1
+        originDialogueID: 0
+        destinationConversationID: 1
+        destinationDialogueID: 68
+        isConnector: 0
+        priority: 4
       - originConversationID: 1
         originDialogueID: 0
         destinationConversationID: 1
         destinationDialogueID: 32
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 0
-        destinationConversationID: 1
-        destinationDialogueID: 21
         isConnector: 0
         priority: 2
       - originConversationID: 1
@@ -738,7 +736,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Event.ErrorNumber"] = Variable["Event.ErrorNumber"] +
+        1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -954,7 +953,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Event.ErrorNumber"] = Variable["Event.ErrorNumber"] +
+        1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1099,7 +1099,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Je ne crois pas que avec ma fracture il vont me prendre en priorit\xE9."
+        value: "[em2] Je ne crois pas que avec ma fracture il vont me prendre en
+          priorit\xE9. [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -1127,8 +1128,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2102.6028
-        y: 344.65753
+        x: 1779.3153
+        y: 373.42468
         width: 160
         height: 30
     - id: 14
@@ -1231,8 +1232,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2102.6028
-        y: 394.65753
+        x: 1779.3153
+        y: 423.42468
         width: 160
         height: 30
     - id: 16
@@ -1258,8 +1259,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Non, le bandage serat utile plus tard mais pour l'instant, rien n'est
-          pr\xE9parer."
+        value: "[em2] Non, le bandage serat utile plus tard mais pour l'instant,
+          rien n'est pr\xE9parer. [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -1322,7 +1323,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 17
+        destinationConversationID: 1
+        destinationDialogueID: 22
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: SetQuestState("Rasurer le PNJ", "success")
       onExecute:
@@ -1385,8 +1392,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1191.429
-        y: 395.71436
+        x: 1017.31714
+        y: 478.53677
         width: 160
         height: 30
     - id: 19
@@ -1434,8 +1441,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1191.429
-        y: 445.71436
+        x: 1017.31714
+        y: 528.53674
         width: 160
         height: 30
     - id: 20
@@ -1505,61 +1512,6 @@ MonoBehaviour:
         y: 529.7322
         width: 160
         height: 30
-    - id: 21
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Merci de m'avoir rassurer.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 21
-        destinationConversationID: 1
-        destinationDialogueID: 22
-        isConnector: 0
-        priority: 2
-      conditionsString: CurrentQuestState("Rasurer le PNJ") == "success"
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 818.63873
-        y: 191.67348
-        width: 160
-        height: 30
     - id: 22
       fields:
       - title: Title
@@ -1623,8 +1575,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 818.35626
-        y: 244.08731
+        x: 215.61652
+        y: 1007.1011
         width: 160
         height: 30
     - id: 23
@@ -1672,14 +1624,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Event.ErrorNumber"] = Variable["Event.ErrorNumber"] +
+        1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 638.35626
-        y: 294.0873
+        x: 35.616516
+        y: 1056.1011
         width: 160
         height: 30
     - id: 24
@@ -1727,14 +1680,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Event.ErrorNumber"] = Variable["Event.ErrorNumber"] +
+        1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 818.35626
-        y: 294.0873
+        x: 215.61652
+        y: 1057.1011
         width: 160
         height: 30
     - id: 25
@@ -1788,8 +1742,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1002.5005
-        y: 295.04587
+        x: 399.76074
+        y: 1058.0596
         width: 160
         height: 30
     - id: 26
@@ -1815,7 +1769,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "He bien non, les fracture vont se g\xE9rir toute seul \xE9ventuelement"
+        value: "[em2] He bien non, les fracture vont se g\xE9rir toute seul \xE9ventuelement
+          [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -1843,8 +1798,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 818.35626
-        y: 344.0873
+        x: 215.61652
+        y: 1107.1011
         width: 160
         height: 30
     - id: 27
@@ -1892,8 +1847,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 820.1984
-        y: 394.08765
+        x: 217.45868
+        y: 1157.1014
         width: 160
         height: 30
     - id: 28
@@ -1948,8 +1903,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1002.5005
-        y: 345.04587
+        x: 399.76074
+        y: 1108.0596
         width: 160
         height: 30
     - id: 29
@@ -1997,8 +1952,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1002.5005
-        y: 395.04602
+        x: 399.76074
+        y: 1158.0597
         width: 160
         height: 30
     - id: 30
@@ -2024,8 +1979,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Non, le bandages va servire \xE0 stabiliser la fracture le temps
-          que la victime arrive \xE0 l'hopital."
+        value: "[em2] Non, le bandages va servire \xE0 stabiliser la fracture le
+          temps que la victime arrive \xE0 l'hopital. [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -2047,8 +2002,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 638.35626
-        y: 344.0873
+        x: 35.616516
+        y: 1106.1011
         width: 160
         height: 30
     - id: 31
@@ -2164,8 +2119,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1251.563
-        y: 145.00003
+        x: 928.27527
+        y: 173.76715
         width: 160
         height: 30
     - id: 33
@@ -2213,8 +2168,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1161.563
-        y: 195.00003
+        x: 838.27527
+        y: 223.76715
         width: 160
         height: 30
     - id: 34
@@ -2258,19 +2213,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 34
         destinationConversationID: 1
-        destinationDialogueID: 35
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 34
-        destinationConversationID: 1
-        destinationDialogueID: 36
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 34
-        destinationConversationID: 1
-        destinationDialogueID: 37
+        destinationDialogueID: 65
         isConnector: 0
         priority: 2
       conditionsString: Variable["Glaces_Obtenu"] >= 3
@@ -2280,8 +2223,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1341.5629
-        y: 195.00003
+        x: 1018.27515
+        y: 223.76715
         width: 160
         height: 30
     - id: 35
@@ -2335,8 +2278,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1191.429
-        y: 295.71436
+        x: 837.31714
+        y: 378.5366
         width: 160
         height: 30
     - id: 36
@@ -2385,14 +2328,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Event.ErrorNumber"] = Variable["Event.ErrorNumber"] +
+        1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1371.4585
-        y: 296.46906
+        x: 1017.31714
+        y: 378.5366
         width: 160
         height: 30
     - id: 37
@@ -2440,14 +2384,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Event.ErrorNumber"] = Variable["Event.ErrorNumber"] +
+        1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1551.4584
-        y: 296.46906
+        x: 1197.3171
+        y: 378.5366
         width: 160
         height: 30
     - id: 38
@@ -2473,8 +2418,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Non, cela ne va que emp\xEAcher la circulation sanguine et agraver
-          la fracture"
+        value: "[em2] Non, cela ne va que emp\xEAcher la circulation sanguine et
+          agraver la fracture [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -2496,8 +2441,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1551.4584
-        y: 346.46906
+        x: 1197.3171
+        y: 428.5366
         width: 160
         height: 30
     - id: 39
@@ -2523,8 +2468,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Non, d\xE9placer la victime ne va que agraver la blessure empirer
-          la douleur."
+        value: "[em2] Non, d\xE9placer la victime ne va que agraver la blessure empirer
+          la douleur. [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -2546,8 +2491,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1371.4585
-        y: 346.46906
+        x: 1017.31714
+        y: 428.5366
         width: 160
         height: 30
     - id: 40
@@ -2602,8 +2547,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1191.429
-        y: 345.71436
+        x: 837.31714
+        y: 428.5366
         width: 160
         height: 30
     - id: 42
@@ -2668,8 +2613,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1680.208
-        y: 57.47654
+        x: 1356.9203
+        y: 86.24366
         width: 160
         height: 30
     - id: 43
@@ -2717,8 +2662,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1605.2079
-        y: 124.521996
+        x: 1284.9202
+        y: 153.28911
         width: 160
         height: 30
     - id: 44
@@ -2772,8 +2717,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1842.708
-        y: 125.65838
+        x: 1519.4203
+        y: 154.42549
         width: 160
         height: 30
     - id: 45
@@ -2827,8 +2772,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1842.708
-        y: 175.65839
+        x: 1519.4203
+        y: 204.4255
         width: 160
         height: 30
     - id: 46
@@ -2894,8 +2839,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1842.708
-        y: 225.65839
+        x: 1519.4203
+        y: 254.4255
         width: 160
         height: 30
     - id: 47
@@ -2949,8 +2894,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1752.1724
-        y: 297.08698
+        x: 1428.8846
+        y: 325.85413
         width: 160
         height: 30
     - id: 48
@@ -2998,14 +2943,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Event.ErrorNumber"] = Variable["Event.ErrorNumber"] +
+        1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2102.6028
-        y: 294.65753
+        x: 1779.3153
+        y: 323.42468
         width: 160
         height: 30
     - id: 49
@@ -3053,14 +2999,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Event.ErrorNumber"] = Variable["Event.ErrorNumber"] +
+        1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1925.6875
-        y: 295.36243
+        x: 1603.3998
+        y: 324.12958
         width: 160
         height: 30
     - id: 50
@@ -3287,7 +3234,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Event.ErrorNumber"] = Variable["Event.ErrorNumber"] +
+        1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3320,8 +3268,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Non, les pr\xE9paratif ne sont pas finis pour que George puisse \xEAtre
-          reconduit \xE0 l'hopital."
+        value: "[em2] Non, les pr\xE9paratif ne sont pas finis pour que George puisse
+          \xEAtre reconduit \xE0 l'hopital. [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -3398,7 +3346,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 38.746544
+        x: 39.746544
         y: 758.3036
         width: 160
         height: 30
@@ -3448,7 +3396,8 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Event.ErrorNumber"] = Variable["Event.ErrorNumber"] +
+        1
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3586,7 +3535,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Non, en fait c'est plus l'inverse.
+        value: '[em2] Non, en fait c''est plus l''inverse. [/em2]'
         type: 0
         typeString: 
       - title: Sequence
@@ -3691,8 +3640,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Non, normalement il est d\xE9ja sens\xE9 avoir des personne qui surveille
-          la victime."
+        value: "[em2] Non, normalement il est d\xE9ja sens\xE9 avoir des personne
+          qui surveille la victime. [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -3714,8 +3663,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1925.6875
-        y: 345.36243
+        x: 1602.3998
+        y: 374.12958
         width: 160
         height: 30
     - id: 62
@@ -3769,8 +3718,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1752.1724
-        y: 347.08698
+        x: 1428.8846
+        y: 375.85413
         width: 160
         height: 30
     - id: 63
@@ -3819,14 +3768,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: "SetQuestState(\"Ammener \xE0 l'hopital\", \"active\")"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1752.1724
-        y: 397.08698
+        x: 1428.8846
+        y: 425.85413
         width: 160
         height: 30
     - id: 64
@@ -3868,19 +3817,252 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
+      userScript: "SetQuestState(\"Ammener \xE0 l'hopital\", \"success\");\nVariable[\"Event.Finis\"]
+        = true"
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1428.8846
+        y: 475.85413
+        width: 160
+        height: 30
+    - id: 65
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Merci.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 65
+        destinationConversationID: 1
+        destinationDialogueID: 66
+        isConnector: 0
+        priority: 2
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1752.1724
-        y: 447.08698
+        x: 1017.31714
+        y: 278.5366
+        width: 160
+        height: 30
+    - id: 66
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[em1] [Mettre la glace.] [/em1]'
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 66
+        destinationConversationID: 1
+        destinationDialogueID: 35
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 66
+        destinationConversationID: 1
+        destinationDialogueID: 36
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 66
+        destinationConversationID: 1
+        destinationDialogueID: 37
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1017.31714
+        y: 328.5366
+        width: 160
+        height: 30
+    - id: 67
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Text rapide
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 67
+        destinationConversationID: 1
+        destinationDialogueID: 25
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 411.91498
+        y: 83.22489
+        width: 160
+        height: 30
+    - id: 68
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Normal
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 68
+        destinationConversationID: 1
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 574.1101
+        y: 124.68828
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 864.83514, y: 0}
-    canvasZoom: 0.9099999
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.7300001
   syncInfo:
     syncActors: 0
     syncItems: 0
