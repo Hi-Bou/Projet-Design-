@@ -5,21 +5,25 @@ using UnityEngine;
 public class DisableShadow : MonoBehaviour
 {
     public SpriteRenderer shadow;
-    public SpriteRenderer itemRender;
+    
+    [SerializeField]
+    private SpriteRenderer itemRender;
 
     private bool show;
 
-    private void Start()
+    private void Awake()
     {
+        shadow.enabled = true;
         show = false;
 
-        shadow.GetComponent<SpriteRenderer>();
-        itemRender.GetComponentInChildren<SpriteRenderer>();
-
-        shadow.enabled = true;
-        itemRender.enabled = false;
-
         StartCoroutine(HideAtStart());
+
+        if (itemRender == null)
+        {
+            return;
+        }
+
+        itemRender.enabled = false;
     }
 
     private void FixedUpdate()
@@ -36,43 +40,50 @@ public class DisableShadow : MonoBehaviour
 
     IEnumerator HideAtStart()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(0.01f);
 
         shadow.enabled = true;
-        itemRender.enabled = false;
         show = false;
+
+        if (itemRender == null)
+        {
+            yield break;
+        }
+
+        itemRender.enabled = false;
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        show = false;
+        show = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        show = true;
-    }*/
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
         show = false;
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        show = true;
     }
 
     private void Activate()
     {
         shadow.enabled = false;
+
+        if (itemRender == null)
+        {
+            return;
+        }
+
         itemRender.enabled = true;
-        Debug.Log("bruh");
     }
 
     private void Desactivate()
     {
         shadow.enabled = true;
+
+        if (itemRender == null)
+        {
+            return;
+        }
+
         itemRender.enabled = false;
     }
 }

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1810637441704713350}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1548339, y: 0.1548339, z: 0}
+  m_LocalScale: {x: 0.16, y: 0.16, z: 0}
   m_Children: []
   m_Father: {fileID: 3853759999458890668}
   m_RootOrder: 0
@@ -178,10 +178,8 @@ MonoBehaviour:
   condition:
     luaConditions: []
     questConditions:
-    - questName: Bandages
-      questState: 2
     - questName: Glaces
-      questState: 4
+      questState: 2
     acceptedTags:
     - Player
     acceptedGameObjects: []
@@ -265,9 +263,7 @@ MonoBehaviour:
   alertDuration: 0
   condition:
     luaConditions: []
-    questConditions:
-    - questName: Bandages
-      questState: 2
+    questConditions: []
     acceptedTags: []
     acceptedGameObjects: []
     luaWizardIndex: -1
