@@ -9,7 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 6b08aee2b4236c54e9f322dd1a1b740e
   - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 420d8978ff0e16a47bc1c3401ce2233c
+  - enabled: 1
     path: Assets/Scenes/Fractured.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Brulure.unity
+    guid: ba7bc36de1b508f47986bd3533f3cc25
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ccf44f0325c92d244995339a66fcbd7c, type: 2}
