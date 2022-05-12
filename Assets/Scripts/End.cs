@@ -8,9 +8,11 @@ using UnityEngine.SceneManagement;
 public class End : MonoBehaviour
 {
     public GameObject EndObject;
+    public Animator anim;
+    public string IsFinish;
 
     private bool IsGameEnd;
-    public Animator anim;
+    
 
     private void Start()
     {
@@ -22,7 +24,7 @@ public class End : MonoBehaviour
 
     private void Update()
     {
-        IsGameEnd = DialogueLua.GetVariable("Event.Finis").asBool;
+        IsGameEnd = DialogueLua.GetVariable(IsFinish).asBool;
 
         if (IsGameEnd == true)
         {
