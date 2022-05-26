@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+
+        Debug.LogError("Unity cannot access DialogueManager.");
     }
 
     private void FixedUpdate()

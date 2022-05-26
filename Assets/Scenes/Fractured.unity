@@ -706,7 +706,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 17.982529, y: 6.049076}
+  m_Offset: {x: 17.982529, y: 5.984399}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -717,7 +717,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.9047546, y: 1.9582686}
+  m_Size: {x: 3.9047546, y: 2.0876231}
   m_EdgeRadius: 0
 --- !u!61 &389881072
 BoxCollider2D:
@@ -862,7 +862,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 20.258417, y: 2.02135}
+  m_Offset: {x: 20.239136, y: 2.040632}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -873,7 +873,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.383892, y: 1.9283237}
+  m_Size: {x: 4.4224567, y: 1.9668884}
   m_EdgeRadius: 0
 --- !u!61 &389881078
 BoxCollider2D:
@@ -966,7 +966,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 24.765278, y: 7.007371}
+  m_Offset: {x: 24.765278, y: 6.9710126}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -977,7 +977,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.3485336, y: 1.898426}
+  m_Size: {x: 7.3485336, y: 1.9711428}
   m_EdgeRadius: 0
 --- !u!61 &389881082
 BoxCollider2D:
@@ -1343,6 +1343,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 894736650}
     m_Modifications:
+    - target: {fileID: 262743246, guid: faeec3f435973114e86caa50e13d0e35, type: 3}
+      propertyPath: condition.questConditions.Array.data[0].questName
+      value: Bandages_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 262743246, guid: faeec3f435973114e86caa50e13d0e35, type: 3}
+      propertyPath: condition.questConditions.Array.data[1].questName
+      value: Glaces_1
+      objectReference: {fileID: 0}
     - target: {fileID: 5045161996870405531, guid: faeec3f435973114e86caa50e13d0e35, type: 3}
       propertyPath: condition.questConditions.Array.data[0].questName
       value: Bandages_1
@@ -1628,6 +1636,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 894736650}
     m_Modifications:
+    - target: {fileID: 262743246, guid: faeec3f435973114e86caa50e13d0e35, type: 3}
+      propertyPath: condition.questConditions.Array.data[0].questName
+      value: Bandages_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 262743246, guid: faeec3f435973114e86caa50e13d0e35, type: 3}
+      propertyPath: condition.questConditions.Array.data[1].questName
+      value: Glaces_1
+      objectReference: {fileID: 0}
     - target: {fileID: 5045161996870405531, guid: faeec3f435973114e86caa50e13d0e35, type: 3}
       propertyPath: condition.questConditions.Array.data[0].questName
       value: Bandages_1
@@ -14500,6 +14516,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 894736650}
     m_Modifications:
+    - target: {fileID: 262743246, guid: faeec3f435973114e86caa50e13d0e35, type: 3}
+      propertyPath: variable
+      value: Quest.Bandages_Obtenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 262743246, guid: faeec3f435973114e86caa50e13d0e35, type: 3}
+      propertyPath: condition.questConditions.Array.data[0].questName
+      value: Bandages_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 262743246, guid: faeec3f435973114e86caa50e13d0e35, type: 3}
+      propertyPath: condition.questConditions.Array.data[1].questName
+      value: Glaces_1
+      objectReference: {fileID: 0}
     - target: {fileID: 5045161996870405531, guid: faeec3f435973114e86caa50e13d0e35, type: 3}
       propertyPath: condition.questConditions.Array.data[0].questName
       value: Bandages_1
@@ -14702,6 +14730,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 840077624}
+    - target: {fileID: 8398351698844168562, guid: deb95f3dd882d8a4d85b51b53aaab87b, type: 3}
+      propertyPath: IsFinish
+      value: Event.Finis
+      objectReference: {fileID: 0}
     - target: {fileID: 8398351698844168562, guid: deb95f3dd882d8a4d85b51b53aaab87b, type: 3}
       propertyPath: EndObject
       value: 

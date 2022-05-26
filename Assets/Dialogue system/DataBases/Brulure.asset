@@ -145,6 +145,28 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
+  - id: 6
+    fields:
+    - title: Name
+      value: ' '
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
   items:
   - id: 1
     fields:
@@ -564,19 +586,31 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 0
         destinationConversationID: 1
-        destinationDialogueID: 32
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 0
-        destinationConversationID: 1
-        destinationDialogueID: 42
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 0
-        destinationConversationID: 1
         destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 0
+        destinationConversationID: 1
+        destinationDialogueID: 80
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 0
+        destinationConversationID: 1
+        destinationDialogueID: 81
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 0
+        destinationConversationID: 1
+        destinationDialogueID: 82
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 0
+        destinationConversationID: 1
+        destinationDialogueID: 83
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -613,7 +647,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Bonjours Jack,
+        value: Bonjour Jack,
         type: 0
         typeString: 
       - title: Sequence
@@ -668,7 +702,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'je cuisinais et soudainement je suis mal tomber sur le sol. '
+        value: "je cuisinais et soudainement je suis mal tomb\xE9 sur le sol. "
         type: 0
         typeString: 
       - title: Sequence
@@ -741,13 +775,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 3
         destinationConversationID: 1
-        destinationDialogueID: 4
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 3
-        destinationConversationID: 1
-        destinationDialogueID: 5
+        destinationDialogueID: 74
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -784,7 +812,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Avec plaisir, je ne vais quand m\xEAme pas te laisser tout seul"
+        value: "Avec plaisir, je ne vais quand m\xEAme pas te laisser tout seul."
         type: 0
         typeString: 
       - title: Sequence
@@ -839,8 +867,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Non d\xE9soler, j'ai un train \xE0 prendre. Mais je reviens tout
-          d\xE8s que je peux."
+        value: "Non d\xE9sol\xE9, j'ai un train \xE0 prendre. Mais je reviens d\xE8s
+          que je peux."
         type: 0
         typeString: 
       - title: Sequence
@@ -896,7 +924,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Bon d'accord j'appelle la police
+        value: Bon d'accord j'appelle la police.
         type: 0
         typeString: 
       - title: Sequence
@@ -951,8 +979,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Monsieur Jack, vous \xEAtes condamner \xE0 5 ans de prison et 75
-          000$ d'amende pour non-assistance \xE0 personne en danger."
+        value: "Monsieur Jack, vous \xEAtes condamn\xE9 \xE0 5 ans de prison et 75
+          000$ d'amende pour non-assistance \xE0 une personne en danger."
         type: 0
         typeString: 
       - title: Sequence
@@ -974,8 +1002,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 189.99274
-        y: 563.9775
+        x: 206.48758
+        y: 567.07025
         width: 160
         height: 30
     - id: 8
@@ -1113,8 +1141,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Oui, C'est la bonne chose \xE0 faire quand une personne est en \xE9tats
-          de danger"
+        value: "Oui, C'est la bonne chose \xE0 faire quand une personne est en \xE9tat
+          de danger."
         type: 0
         typeString: 
       - title: Sequence
@@ -1142,8 +1170,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 651.8847
-        y: 907.81195
+        x: 649.67554
+        y: 903.0711
         width: 160
         height: 30
     - id: 12
@@ -1169,8 +1197,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Dire par exemple une petite phrase comme "sa va bien aller, je suis
-          la et j'appelle de l'aide"
+        value: "Dire par exemple une petite phrase comme \"\xE7a va bien aller, je
+          suis l\xE0 et j'appelle de l'aide\""
         type: 0
         typeString: 
       - title: Sequence
@@ -1225,8 +1253,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em2] Je ne crois pas que avec ma fracture il vont me prendre en
-          priorit\xE9. [/em2]"
+        value: "[em2] Je ne crois pas que mon \xE9tat soit une priorit\xE9. [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -1254,8 +1281,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1741.8616
-        y: 559.487
+        x: 1764.503
+        y: 561.3738
         width: 160
         height: 30
     - id: 14
@@ -1336,7 +1363,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Ma blessur n'est pas si grave comparer \xE0 d'autre"
+        value: "Ma blessure n'est pas si grave si on compare \xE0 d'autre."
         type: 0
         typeString: 
       - title: Sequence
@@ -1391,8 +1418,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em2] Non, le bandage serat utile plus tard mais pour l'instant,
-          rien n'est pr\xE9parer. [/em2]"
+        value: "[em2] Non, le bandage sera utile plus tard mais pour l'instant, rien
+          n'est pr\xE9par\xE9. [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -1420,7 +1447,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 312.15533
+        x: 314.2172
         y: 743.2347
         width: 160
         height: 30
@@ -1502,7 +1529,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Je suis sur qu'il y a des bandages dans ma maison...
+        value: Je suis certain qu'il y a des bandages dans ma maison...
         type: 0
         typeString: 
       - title: Sequence
@@ -1624,19 +1651,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 20
         destinationConversationID: 1
-        destinationDialogueID: 9
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 20
-        destinationConversationID: 1
-        destinationDialogueID: 50
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 20
-        destinationConversationID: 1
-        destinationDialogueID: 53
+        destinationDialogueID: 75
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1646,8 +1661,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 587.49286
-        y: 516.47736
+        x: 586.4619
+        y: 504.10626
         width: 160
         height: 30
     - id: 22
@@ -1691,19 +1706,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 22
         destinationConversationID: 1
-        destinationDialogueID: 23
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 22
-        destinationConversationID: 1
-        destinationDialogueID: 24
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 22
-        destinationConversationID: 1
-        destinationDialogueID: 25
+        destinationDialogueID: 77
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -1796,7 +1799,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[em1] [Partir, sa va s''arrenger tout seul] [/em1]'
+        value: '[em1] [Partir, sa va s''arranger tout seul] [/em1]'
         type: 0
         typeString: 
       - title: Sequence
@@ -1825,7 +1828,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 955.37805
+        x: 953.4912
         y: 1198.0176
         width: 160
         height: 30
@@ -1907,7 +1910,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em2] He bien non, les fracture vont se g\xE9rir toute seul \xE9ventuelement
+        value: "[em2] He bien non, les fractures vont se g\xE9rir toute seul \xE9ventuelement
           [/em2]"
         type: 0
         typeString: 
@@ -1963,7 +1966,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Mais les os vont mal se replacer et la victime ne va pas bien se porter.
+        value: Mais les os peuvent mal se replacer.
         type: 0
         typeString: 
       - title: Sequence
@@ -2018,8 +2021,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Oui, la victime va avoir moins mal apr\xE8s lui avoir mis de la glace
-          sur le site de la fracture"
+        value: "Oui, la victime aura moins mal apr\xE8s lui avoir mis de la glace
+          sur le site de la fracture."
         type: 0
         typeString: 
       - title: Sequence
@@ -2074,7 +2077,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Pour la glace aussi je suis sur d'en avoir chez moi.
+        value: De la glace, je suis certain d'en avoir chez moi.
         type: 0
         typeString: 
       - title: Sequence
@@ -2123,8 +2126,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em2] Non, le bandages va servire \xE0 stabiliser la fracture le
-          temps que la victime arrive \xE0 l'hopital. [/em2]"
+        value: "[em2] Non, le bandage va servir \xE0 stabiliser la fracture le temps
+          que la victime arrive \xE0 l'hopital. [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -2179,7 +2182,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Tout va bien aller, je suis l\xE0 et j'appelle un m\xE9decin."
+        value: "Tout va bien aller, je suis l\xE0 et j'appelle l'ambulance."
         type: 0
         typeString: 
       - title: Sequence
@@ -2211,116 +2214,6 @@ MonoBehaviour:
         y: 1011.00336
         width: 160
         height: 30
-    - id: 32
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: As tu les trois glaces?
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 32
-        destinationConversationID: 1
-        destinationDialogueID: 33
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 32
-        destinationConversationID: 1
-        destinationDialogueID: 34
-        isConnector: 0
-        priority: 2
-      conditionsString: CurrentQuestState("Glaces_1") == "active"
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1413.2377
-        y: 190.35776
-        width: 160
-        height: 30
-    - id: 33
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Pas encore.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Quest.Glaces_Obtenu"] < 3
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1234.8074
-        y: 279.92264
-        width: 160
-        height: 30
     - id: 34
       fields:
       - title: Title
@@ -2344,7 +2237,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Les voici.
+        value: "\xC7a me fait plaisir."
         type: 0
         typeString: 
       - title: Sequence
@@ -2362,17 +2255,17 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 34
         destinationConversationID: 1
-        destinationDialogueID: 65
+        destinationDialogueID: 78
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["Quest.Glaces_Obtenu"] >= 3)
+      conditionsString: 
       userScript: SetQuestState("Glaces_1", "success")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1509.9758
+        x: 1511.0747
         y: 268.4788
         width: 160
         height: 30
@@ -2454,7 +2347,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em1] [D\xE9placer la victime pour la mettre vers une place plus
+        value: "[em1] [D\xE9placer la victime pour l'installer \xE0 un endroit plus
           confortable] [/em1]"
         type: 0
         typeString: 
@@ -2511,7 +2404,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em1] [Serrer  le bras pour ne pas que l'os se d\xE9place plus] [/em1]"
+        value: '[em1] [Serrer  le bandage sur le bras pour bien l''immobiliser] [/em1]'
         type: 0
         typeString: 
       - title: Sequence
@@ -2540,8 +2433,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1582.1589
-        y: 469.1172
+        x: 1588.7627
+        y: 467.2304
         width: 160
         height: 30
     - id: 38
@@ -2567,8 +2460,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em2] Non, cela ne va que emp\xEAcher la circulation sanguine et
-          agraver la fracture [/em2]"
+        value: "[em2] Non, cela ne va qu'emp\xEAcher la circulation sanguine et agraver
+          la fracture [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -2623,7 +2516,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em2] Non, d\xE9placer la victime ne va que agraver la blessure empirer
+        value: "[em2] Non, d\xE9placer la victime peut agraver la blessure et augmenter
           la douleur. [/em2]"
         type: 0
         typeString: 
@@ -2652,8 +2545,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1428.8396
-        y: 559.55524
+        x: 1433.5566
+        y: 556.72504
         width: 160
         height: 30
     - id: 40
@@ -2679,8 +2572,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Oui, passer des bandages va emp\xE8cher le plus possible le bras
-          de bouger pour \xE9viter d'agraver la fracture."
+        value: "Oui, mettre des bandages va stabiliser le bras afin d'\xE9viter d'agraver
+          la fracture."
         type: 0
         typeString: 
       - title: Sequence
@@ -2708,174 +2601,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1200.844
-        y: 517.76666
-        width: 160
-        height: 30
-    - id: 42
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: As-tu les trois bandages?
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 42
-        destinationConversationID: 1
-        destinationDialogueID: 43
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 42
-        destinationConversationID: 1
-        destinationDialogueID: 44
-        isConnector: 0
-        priority: 2
-      conditionsString: (CurrentQuestState("Glaces_1") == "success") and (CurrentQuestState("Bandages_1")
-        == "active")
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1754.3529
-        y: 115.81523
-        width: 160
-        height: 30
-    - id: 43
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Pas encore.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["Quest.Bandages_Obtenu"] < 3
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1732.1189
-        y: 227.46361
-        width: 160
-        height: 30
-    - id: 44
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Les voici.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 44
-        destinationConversationID: 1
-        destinationDialogueID: 45
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["Quest.Bandages_Obtenu"] >= 3
-      userScript: SetQuestState("Bandages_1", "success")
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1992.0498
-        y: 224.90465
+        x: 1202.7308
+        y: 514.93646
         width: 160
         height: 30
     - id: 45
@@ -2901,7 +2628,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Merci, essaye de na pas les mettre trop ser\xE9e."
+        value: Mais essaye de ne pas trop serrer les bandages.
         type: 0
         typeString: 
       - title: Sequence
@@ -2929,8 +2656,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1976.7217
-        y: 299.61475
+        x: 2011.8865
+        y: 200.71365
         width: 160
         height: 30
     - id: 46
@@ -2956,7 +2683,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Sinon tu risque de bloquer mon flux sanguin.
+        value: Sinon tu risque de bloquer ma circulation sanguine.
         type: 0
         typeString: 
       - title: Sequence
@@ -2974,19 +2701,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 46
         destinationConversationID: 1
-        destinationDialogueID: 47
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 46
-        destinationConversationID: 1
-        destinationDialogueID: 48
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 46
-        destinationConversationID: 1
-        destinationDialogueID: 49
+        destinationDialogueID: 79
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2996,8 +2711,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1843.6372
-        y: 364.86127
+        x: 2015.0659
+        y: 251.67444
         width: 160
         height: 30
     - id: 47
@@ -3051,8 +2766,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1925.582
-        y: 579.82025
+        x: 1923.6953
+        y: 567.5561
         width: 160
         height: 30
     - id: 48
@@ -3246,7 +2961,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "Oui, il doit toujours y avoir une personne qui surveillle la victime
-          le temps que les pr\xE9paratif sois pr\xE8s"
+          le temps que les pr\xE9paratifs soient pr\xEAts."
         type: 0
         typeString: 
       - title: Sequence
@@ -3274,8 +2989,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 660.80414
-        y: 743.23456
+        x: 650.4949
+        y: 704.0593
         width: 160
         height: 30
     - id: 52
@@ -3302,7 +3017,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: "Ainsi, si la victime tombe inconsiante ou quoi que se sois arrive,
-          nous pourrions \xEAtre au courant."
+          nous pourrions \xEAtre au courant et agir plus rapidement."
         type: 0
         typeString: 
       - title: Sequence
@@ -3320,19 +3035,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 52
         destinationConversationID: 1
-        destinationDialogueID: 8
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 52
-        destinationConversationID: 1
-        destinationDialogueID: 55
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 52
-        destinationConversationID: 1
-        destinationDialogueID: 56
+        destinationDialogueID: 76
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3342,8 +3045,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 644.6523
-        y: 793.9804
+        x: 667.94604
+        y: 755.69257
         width: 160
         height: 30
     - id: 53
@@ -3425,8 +3128,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em2] Non, les pr\xE9paratif ne sont pas finis pour que George puisse
-          \xEAtre reconduit \xE0 l'hopital. [/em2]"
+        value: "[em2] Non, les pr\xE9paratifs ne sont pas termin\xE9s pour que George
+          puisse \xEAtre reconduit \xE0 l'hopital. [/em2]"
         type: 0
         typeString: 
       - title: Sequence
@@ -3454,7 +3157,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 863.51324
+        x: 865.57513
         y: 730.4034
         width: 160
         height: 30
@@ -3536,7 +3239,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[em1] [Garder le bras vers le bas pour que le sang s''y rende plus.]
+        value: '[em1] [Garder le bras vers le bas pour que le sang circule bien.]
           [/em1]'
         type: 0
         typeString: 
@@ -3815,7 +3518,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em2] Non, normalement il est d\xE9ja sens\xE9 avoir des personne
+        value: "[em2] Non, normalement il est d\xE9ja sens\xE9 y avoir des personnes
           qui surveille la victime. [/em2]"
         type: 0
         typeString: 
@@ -4008,128 +3711,6 @@ MonoBehaviour:
         y: 801.6108
         width: 160
         height: 30
-    - id: 65
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Merci.
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 65
-        destinationConversationID: 1
-        destinationDialogueID: 66
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1498.4504
-        y: 330.99457
-        width: 160
-        height: 30
-    - id: 66
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: '[em1] [Mettre la glace.] [/em1]'
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 66
-        destinationConversationID: 1
-        destinationDialogueID: 35
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 66
-        destinationConversationID: 1
-        destinationDialogueID: 36
-        isConnector: 0
-        priority: 2
-      - originConversationID: 1
-        originDialogueID: 66
-        destinationConversationID: 1
-        destinationDialogueID: 37
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 1489.2332
-        y: 403.914
-        width: 160
-        height: 30
     - id: 69
       fields:
       - title: Title
@@ -4153,8 +3734,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Tu as la chance de recommencer au dernier choix, mais cette fois
-          si fait la bonne d\xE9cision."
+        value: "Tu as la chance de recommencer au dernier choix, mais cette fois-ci,
+          prend la bonne d\xE9cision."
         type: 0
         typeString: 
       - title: Sequence
@@ -4172,7 +3753,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 69
         destinationConversationID: 1
-        destinationDialogueID: 20
+        destinationDialogueID: 75
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4182,7 +3763,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 23.46576
+        x: 24.496689
         y: 667.8315
         width: 160
         height: 30
@@ -4209,8 +3790,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Tu as la chance de recommencer au dernier choix, mais cette fois
-          si fait la bonne d\xE9cision."
+        value: "Tu as la chance de recommencer au dernier choix, mais cette fois-ci,
+          prend la bonne d\xE9cision."
         type: 0
         typeString: 
       - title: Sequence
@@ -4228,7 +3809,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 70
         destinationConversationID: 1
-        destinationDialogueID: 51
+        destinationDialogueID: 76
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4265,8 +3846,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Tu as la chance de recommencer au dernier choix, mais cette fois
-          si fait la bonne d\xE9cision."
+        value: "Tu as la chance de recommencer au dernier choix, mais cette fois-ci,
+          prend la bonne d\xE9cision."
         type: 0
         typeString: 
       - title: Sequence
@@ -4284,7 +3865,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 71
         destinationConversationID: 1
-        destinationDialogueID: 11
+        destinationDialogueID: 77
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4294,7 +3875,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 116.28949
+        x: 115.02367
         y: 1076.2664
         width: 160
         height: 30
@@ -4321,8 +3902,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Tu as la chance de recommencer au dernier choix, mais cette fois
-          si fait la bonne d\xE9cision."
+        value: "Tu as la chance de recommencer au dernier choix, mais cette fois-ci,
+          prend la bonne d\xE9cision."
         type: 0
         typeString: 
       - title: Sequence
@@ -4340,7 +3921,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 72
         destinationConversationID: 1
-        destinationDialogueID: 65
+        destinationDialogueID: 78
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4350,7 +3931,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1075.0835
+        x: 1074.1401
         y: 377.3046
         width: 160
         height: 30
@@ -4377,8 +3958,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Tu as la chance de recommencer au dernier choix, mais cette fois
-          si fait la bonne d\xE9cision."
+        value: "Tu as la chance de recommencer au dernier choix, mais cette fois-ci,
+          prend la bonne d\xE9cision."
         type: 0
         typeString: 
       - title: Sequence
@@ -4396,7 +3977,7 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 73
         destinationConversationID: 1
-        destinationDialogueID: 45
+        destinationDialogueID: 79
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -4406,13 +3987,621 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2330.4717
-        y: 714.68646
+        x: 2358.32
+        y: 512.15485
+        width: 160
+        height: 30
+    - id: 74
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 74
+        destinationConversationID: 1
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 74
+        destinationConversationID: 1
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 360.30304
+        y: 424.07184
+        width: 160
+        height: 30
+    - id: 75
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 75
+        destinationConversationID: 1
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 75
+        destinationConversationID: 1
+        destinationDialogueID: 50
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 75
+        destinationConversationID: 1
+        destinationDialogueID: 53
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 587.49286
+        y: 566.47736
+        width: 160
+        height: 30
+    - id: 76
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 76
+        destinationConversationID: 1
+        destinationDialogueID: 56
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 76
+        destinationConversationID: 1
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 76
+        destinationConversationID: 1
+        destinationDialogueID: 55
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 659.5551
+        y: 803.66974
+        width: 160
+        height: 30
+    - id: 77
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 77
+        destinationConversationID: 1
+        destinationDialogueID: 24
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 77
+        destinationConversationID: 1
+        destinationDialogueID: 23
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 77
+        destinationConversationID: 1
+        destinationDialogueID: 25
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 647.0236
+        y: 1148.3458
+        width: 160
+        height: 30
+    - id: 78
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 78
+        destinationConversationID: 1
+        destinationDialogueID: 37
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 78
+        destinationConversationID: 1
+        destinationDialogueID: 36
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 78
+        destinationConversationID: 1
+        destinationDialogueID: 35
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1511.6373
+        y: 321.6539
+        width: 160
+        height: 30
+    - id: 79
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: ...
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 79
+        destinationConversationID: 1
+        destinationDialogueID: 49
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 79
+        destinationConversationID: 1
+        destinationDialogueID: 47
+        isConnector: 0
+        priority: 2
+      - originConversationID: 1
+        originDialogueID: 79
+        destinationConversationID: 1
+        destinationDialogueID: 48
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1862.6243
+        y: 408.5322
+        width: 160
+        height: 30
+    - id: 80
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Merci pour les 3 glaces
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 80
+        destinationConversationID: 1
+        destinationDialogueID: 34
+        isConnector: 0
+        priority: 2
+      conditionsString: (CurrentQuestState("Glaces_1") == "active") and (Variable["Quest.Glaces_Obtenu"]
+        >= 3)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1399.8405
+        y: 176.24394
+        width: 160
+        height: 30
+    - id: 81
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Il te faut les 3 glaces pour continuer.
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: (CurrentQuestState("Glaces_1") == "active") and (Variable["Quest.Glaces_Obtenu"]
+        < 3)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 831.70856
+        y: 174.04614
+        width: 160
+        height: 30
+    - id: 82
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Il te faut les 3 bandages pour continuer
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: (CurrentQuestState("Glaces_1") == "success") and (CurrentQuestState("Bandages_1")
+        == "active") and (Variable["Quest.Bandages_Obtenu"] < 3)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1682.258
+        y: 87.232956
+        width: 160
+        height: 30
+    - id: 83
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Merci pour les 3 bandages
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 83
+        destinationConversationID: 1
+        destinationDialogueID: 45
+        isConnector: 0
+        priority: 2
+      conditionsString: (CurrentQuestState("Glaces_1") == "success") and (CurrentQuestState("Bandages_1")
+        == "active") and (Variable["Quest.Bandages_Obtenu"] >= 3)
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2003.1372
+        y: 58.66153
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7000001
+    canvasScrollPosition: {x: 962.26385, y: 0}
+    canvasZoom: 1.0600002
   - id: 2
     fields:
     - title: Title
@@ -4596,7 +4785,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "La derni\xE8re fois je m'\xE9tais fracturer le bras."
+        value: "La derni\xE8re fois je m'\xE9tais fractur\xE9 le bras."
         type: 0
         typeString: 
       - title: Sequence
@@ -4628,7 +4817,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 999.0309
+        x: 998.0408
         y: 185.13022
         width: 160
         height: 30
@@ -4655,7 +4844,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Mais maitenant, une casserole d'eau bouillante m'ai tomber dessus.
+        value: "Mais maitenant, j'ai renvers\xE9 une  casserole d'eau bouillante
+          sur moi."
         type: 0
         typeString: 
       - title: Sequence
@@ -4710,7 +4900,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Je crois que je me suis bruler au 2\xE8me degr\xE9s."
+        value: "Je crois que je me suis br\xFBl\xE9."
         type: 0
         typeString: 
       - title: Sequence
@@ -4771,8 +4961,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em1] [casser les cloque qui apparaiterons sur la peau pour que sa
-          g\xE9risse plus vite.] [/em1]"
+        value: "[em1] [Perser les cloques qui apparaiterons sur la peau pour que
+          \xE7a g\xE9risse plus vite.] [/em1]"
         type: 0
         typeString: 
       - title: Sequence
@@ -4828,7 +5018,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Non, il ne faut surtout pas faire sa.
+        value: "Non, il ne faut surtout pas faire \xE7a."
         type: 0
         typeString: 
       - title: Sequence
@@ -4883,7 +5073,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Il aident \xE0 proteger contre l'infection."
+        value: "Ils aident \xE0 proteger contre l'infection."
         type: 0
         typeString: 
       - title: Sequence
@@ -4987,7 +5177,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[em1] [Refroidir la brulure] [/em1]'
+        value: "[em1] [Refroidir la br\xFBlure] [/em1]"
         type: 0
         typeString: 
       - title: Sequence
@@ -5042,8 +5232,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Oui, il faut tenir la brulure sous eau ti\xE8de ou appliquer une
-          compresse fra\xEEche et humide jusque \xE0 se que la douleur diminue."
+        value: "Oui, il faut tenir la br\xFBlure sous de l'eau froide ou appliquer
+          une compresse fra\xEEche et humide jusque \xE0 se que la douleur diminue."
         type: 0
         typeString: 
       - title: Sequence
@@ -5098,7 +5288,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Mais n'utiliser pas de glace, le contact direct avec une brulure pourrait
+        value: Mais n'utiliser pas de glace, le contact direct avec la peau pourrait
           endommager d'aventage les tissus.
         type: 0
         typeString: 
@@ -5325,7 +5515,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Je crois que j'ai quelque compresse chez moi.
+        value: Je crois que j'ai quelques compresses chez moi.
         type: 0
         typeString: 
       - title: Sequence
@@ -5711,7 +5901,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[em1] [pansez la brulure] [/em1]'
+        value: "[em1] [Penser la br\xFBlure] [/em1]"
         type: 0
         typeString: 
       - title: Sequence
@@ -5767,8 +5957,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Non, parce que si un bandage est mis, l'air ne va plus pouvoir rafr\xE9vhir
-          la brulure."
+        value: "Non, parce que si un bandage est mis, l'air ne va plus pouvoir rafraichir
+          la br\xFBlure."
         type: 0
         typeString: 
       - title: Sequence
@@ -5872,8 +6062,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Non, la seul chose que ont peux mettre pour diminuer la douleur est
-          une compresse ti\xE8de ou de l'eau ti\xE8de."
+        value: Non, la seul chose que ont peux mettre pour diminuer la douleur est
+          une compresse d'eau froide ou de l'eau froide.
         type: 0
         typeString: 
       - title: Sequence
@@ -5928,8 +6118,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Mais surtout pas froid parce que sa pourrait endomager encore plus
-          les tissus
+        value: Mais surtout pas de la glace parce que sa pourrait endomager encore
+          plus les tissus
         type: 0
         typeString: 
       - title: Sequence
@@ -5978,8 +6168,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em1] [Apeller le 911 pour que il puisse donner \xE0 George des soins
-          plus pouss\xE9] [/em1]"
+        value: "[em1] [Apeller le 911 pour que il puisse donner \xE0 George des soins]
+          [/em1]"
         type: 0
         typeString: 
       - title: Sequence
@@ -6034,8 +6224,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[em1] [La brulure est surment mineur, ne pas allez voir un m\xE9decin
-          pour just sa] [/em1]"
+        value: "[em1] [La br\xFBlure est surement mineure, ne pas allez voir un m\xE9decin
+          juste pour \xE7a] [/em1]"
         type: 0
         typeString: 
       - title: Sequence
@@ -6146,7 +6336,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Oui, on ne sais jamais la brulure est grave \xE0 quelle point."
+        value: "Oui, on ne sais jamais la br\xFBlure est grave \xE0 quelle point."
         type: 0
         typeString: 
       - title: Sequence
@@ -6174,7 +6364,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1968.9283
+        x: 1967.9381
         y: 670.3372
         width: 160
         height: 30
@@ -6257,7 +6447,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Mais normalement on essaye de ne pas aller jusque la.
+        value: "Mais normalement on essaye de ne pas aller jusque l\xE0."
         type: 0
         typeString: 
       - title: Sequence
@@ -6279,7 +6469,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1540.8193
+        x: 1541.8093
         y: 719.1839
         width: 160
         height: 30
@@ -6306,7 +6496,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Non, il ne faut jamais pr\xE9sumer que la brulure est mineur."
+        value: "Non, il ne faut jamais pr\xE9sumer que la br\xFBlure est mineure."
         type: 0
         typeString: 
       - title: Sequence
@@ -6361,8 +6551,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "M\xEAme une petite brulure peut \xEAtre grave seloon sa localisation
-          et l';age de la personne."
+        value: "M\xEAme une petite br\xFBlure peut \xEAtre grave seloon sa localisation
+          et l'\xE2ge de la personne."
         type: 0
         typeString: 
       - title: Sequence
@@ -6466,7 +6656,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Oui, parce que les objet serr\xE9s vont bloquer le passage du sang
+        value: "Oui, parce que les objets serr\xE9s vont bloquer le circulation sanguine
           dans le membre brul\xE9"
         type: 0
         typeString: 
@@ -6508,7 +6698,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1691.5381
-        y: 436.63046
+        y: 435.6403
         width: 160
         height: 30
     - id: 38
@@ -6671,8 +6861,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 792.1937, y: 0}
-    canvasZoom: 0.8300009
+    canvasScrollPosition: {x: 950.0964, y: 2.970337}
+    canvasZoom: 1.0100007
   syncInfo:
     syncActors: 0
     syncItems: 0
